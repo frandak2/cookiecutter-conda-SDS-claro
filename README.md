@@ -7,6 +7,14 @@ _A logical, reasonably standardized, but flexible project structure for doing an
 - [Conda](https://docs.conda.io/projects/conda/en/latest/user-guide/install/download.html)
 - [Cookiecutter Python package](http://cookiecutter.readthedocs.org/en/latest/installation.html): This can be installed with pip by or conda depending on how you manage your Python packages:
 
+```bash
+conda env create -f environment.yml
+activate {{ cookiecutter.project_slug }}
+```
+
+or
+
+
 ``` bash
 pip install cookiecutter
 ```
@@ -22,7 +30,7 @@ conda install -c conda-forge cookiecutter
 In a folder where you want your project generated:
 
 ```bash
-cookiecutter https://github.com/jvelezmagic/cookiecutter-conda-data-science
+cookiecutter https://cookiecutter-conda-SDS-claro
 ```
 
 ## Resulting directory structure
@@ -31,21 +39,21 @@ cookiecutter https://github.com/jvelezmagic/cookiecutter-conda-data-science
     ├── tasks.py           <- Invoke with commands like `notebook`.
     ├── README.md          <- The top-level README for developers using this project.
     ├── install.md         <- Detailed instructions to set up this project.
-    ├── data
+    ├── 1_Datos
     │   ├── external       <- Data from third party sources.
     │   ├── interim        <- Intermediate data that has been transformed.
     │   ├── processed      <- The final, canonical data sets for modeling.
     │   └── raw            <- The original, immutable data dump.
     │
-    ├── models             <- Trained and serialized models, model predictions, or model summaries.
-    │
-    ├── notebooks          <- Jupyter notebooks. Naming convention is a number (for ordering),
+    ├── 2_Scripts          <- Jupyter notebooks. Naming convention is a number (for ordering),
     │                         the creator's initials, and a short `-` delimited description, e.g.
     │                         `1.0-jqp-initial-data-exploration`.
     │
-    ├── references         <- Data dictionaries, manuals, and all other explanatory materials.
+    ├── 3_Resultados        <- Export models in jlib or pkl, images and tables
     │
-    ├── reports            <- Generated analysis as HTML, PDF, LaTeX, etc.
+    ├── 4_Presetnacion      <- Presentation to Customers
+    │
+    ├── 5_Documentacion    <- Generated analysis as HTML, PDF, LaTeX, etc.
     │   └── figures         <- Generated graphics and figures to be used in reporting.
     │
     ├── environment.yml    <- The requirements file for reproducing the analysis environment.
