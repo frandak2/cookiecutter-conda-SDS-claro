@@ -7,14 +7,6 @@ _A logical, reasonably standardized, but flexible project structure for doing an
 - [Conda](https://docs.conda.io/projects/conda/en/latest/user-guide/install/download.html)
 - [Cookiecutter Python package](http://cookiecutter.readthedocs.org/en/latest/installation.html): This can be installed with pip by or conda depending on how you manage your Python packages:
 
-```bash
-conda env create -f environment.yml
-activate {{ cookiecutter.project_slug }}
-```
-
-or
-
-
 ``` bash
 pip install cookiecutter
 ```
